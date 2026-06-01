@@ -7,4 +7,7 @@ def light_spell_allowed_ingredients() -> list[str]:
 
 def light_spell_record(spell_name: str, ingredients: str) -> str:
     temp = alchemy.grimoire.light_validator.validate_ingredients(ingredients)
-    print(temp)
+    if "INVALID" in temp:
+        return "Rejected, Invalid Ingredients"
+    elif "VALID" in temp:
+        return f"Spell recorded: {spell_name} ({temp})"
