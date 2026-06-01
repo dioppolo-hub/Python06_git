@@ -11,3 +11,4 @@ def light_spell_record(spell_name: str, ingredients: str) -> str:
         return "Rejected, Invalid Ingredients"
     elif "VALID" in temp:
         return f"Spell recorded: {spell_name} ({temp})"
+    return "ERROR"
